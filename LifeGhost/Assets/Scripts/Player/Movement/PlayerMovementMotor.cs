@@ -8,9 +8,13 @@ public class PlayerMovementMotor : MonoBehaviour
     public Vector3 movementDirection;
 
     private Rigidbody myBody;
-    public float walkingSpeed;
-    public float walkingSnapyness;
-    public float turningSmoothing;
+    
+    [SerializeField]
+    private float walkingSpeed;
+    [SerializeField]
+    private float walkingSnapyness;
+    [SerializeField]
+    private float turningSmoothing;
 
     void Awake()
     {
