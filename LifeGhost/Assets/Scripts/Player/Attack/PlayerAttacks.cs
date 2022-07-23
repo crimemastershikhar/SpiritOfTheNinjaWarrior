@@ -116,6 +116,26 @@ public class PlayerAttacks : MonoBehaviour
                 anim.SetBool(ANIMATION_SKILL1, true);
                 StartCoroutine(ResetSkills(1));
             }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (s2_NotUsed)
+            {
+                s2_NotUsed = false;
+                anim.SetBool(ANIMATION_SKILL2, true);
+                StartCoroutine(ResetSkills(2));
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (s3_NotUsed)
+            {
+                s3_NotUsed = false;
+                anim.SetBool(ANIMATION_SKILL3, true);
+                StartCoroutine(ResetSkills(3));
+            }
+        }
     }
 
     IEnumerator ResetSkills(int skill)
@@ -135,7 +155,7 @@ public class PlayerAttacks : MonoBehaviour
         }
     }
     
-    //Skill Effects
+    //Skill 1 Effects
     void SkillOne(bool skillOne)
     {
         if (skillOne)
@@ -144,6 +164,13 @@ public class PlayerAttacks : MonoBehaviour
             audioSource.PlayOneShot(skillOneMusic1);
             StartCoroutine(SkillOneCoroutine());
         }
+    }
+    
+    void SkillOneEnd(bool skillOneEnd)
+    {
+        if(skillOneEnd)
+            anim.SetBool(ANIMATION_SKILL1, false);
+        
     }
 
     void SkillOneSound(bool play)
@@ -165,15 +192,65 @@ public class PlayerAttacks : MonoBehaviour
         Instantiate(skillOne_DamagePrefab, skillOnePoint_7.position, skillOnePoint_7.rotation);
         Instantiate(skillOne_DamagePrefab, skillOnePoint_8.position, skillOnePoint_8.rotation);
     }
-
-    void SkillOneEnd(bool skillOneEnd)
+    
+    //Skill 2 Effects
+    void SkillTwo(bool skillTwo)
     {
-        if(skillOneEnd)
-            anim.SetBool(ANIMATION_SKILL1, false);
+        if (skillTwo)
+        {
+            Instantiate(skillTwo_EffectPrefab, skillTwo_Point.position, skillTwo_Point.rotation);
+            audioSource.PlayOneShot(skillTwoMusic);
+            StartCoroutine(SkillTwoCoroutine());
+        }
+    }
+
+    void SkillTwoEnd(bool skillTwoEnd)
+    {
+        if(skillTwoEnd)
+            anim.SetBool(ANIMATION_SKILL2, false);
+    }
+    
+    /*void SkillTwoSound(bool play)
+    {
+        if(play)
+            audioSource.PlayOneShot();
+    }*/
+
+    IEnumerator SkillTwoCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_1.position, skillTwoPoint_1.rotation);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_2.position, skillTwoPoint_2.rotation);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_3.position, skillTwoPoint_3.rotation);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_4.position, skillTwoPoint_4.rotation);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_5.position, skillTwoPoint_5.rotation);
+        Instantiate(skillTwo_DamagePrefab, skillTwoPoint_6.position, skillTwoPoint_6.rotation);
         
     }
     
-    
+    // Skill 3 Effects
+
+    void SkillThree(bool skillThree)
+    {
+        if (skillThree)
+        {
+            Instantiate(skillThree_EffectPrefab, skillThreePoint_1.position, skillThreePoint_1.rotation);
+            Instantiate(skillThree_EffectPrefab, skillThreePoint_2.position, skillThreePoint_2.rotation);
+            Instantiate(skillThree_EffectPrefab, skillThreePoint_3.position, skillThreePoint_3.rotation);
+            Instantiate(skillThree_EffectPrefab, skillThreePoint_4.position, skillThreePoint_4.rotation);
+            Instantiate(skillThree_EffectPrefab, skillThreePoint_5.position, skillThreePoint_5.rotation);
+            /*audioSource.PlayOneShot(skillThreeMusic);*/
+
+        }
+    }
+
+    void SkillThreeEnd(bool skillThreeEnd)
+    {
+        if(skillThreeEnd)
+            anim.SetBool(ANIMATION_SKILL3, false);
+    }
+
+
     
     
     
