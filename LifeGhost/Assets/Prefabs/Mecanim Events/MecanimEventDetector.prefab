@@ -133,4 +133,41 @@ MonoBehaviour:
         conditions: []
       critical: 0
       isEnable: 1
+  - animatorController: {fileID: 9100000, guid: 8db498fa3564d0c49914eaba533aef2f, type: 2}
+    layer: 0
+    stateNameHash: 1655256879
+    events:
+    - functionName: SkillOneSound
+      normalizedTime: 0.05
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+    - functionName: SkillOne
+      normalizedTime: 0.25
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+    - functionName: SkillOneEnd
+      normalizedTime: 0.59
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
   lastEdit: {fileID: 0}

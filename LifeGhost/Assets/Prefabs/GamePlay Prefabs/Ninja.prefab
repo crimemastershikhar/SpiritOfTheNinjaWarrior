@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &19078032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 19078033}
+  m_Layer: 0
+  m_Name: SkillThreePoint4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &19078033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19078032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 697329779822987151}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &30186749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30186750}
+  m_Layer: 0
+  m_Name: SkillThreePoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &30186750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30186749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 697329779822987151}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &51599275
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +404,66 @@ Transform:
   m_Father: {fileID: 138356505}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1045118583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045118584}
+  m_Layer: 0
+  m_Name: SkillThreePoint5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045118584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045118583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 697329779822987151}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1056960236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056960237}
+  m_Layer: 0
+  m_Name: SkillThreePoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056960237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056960236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 697329779822987151}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110307553
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +493,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 138356505}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1116860199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116860200}
+  m_Layer: 0
+  m_Name: SkillThreePoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1116860200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116860199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 697329779822987151}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259935082
 GameObject:
@@ -1640,7 +1790,12 @@ Transform:
   m_LocalRotation: {x: -0.006330391, y: 0.102290496, z: 0.0017215442, w: 0.994733}
   m_LocalPosition: {x: -0.18267615, y: 0.000000037252903, z: 0.00000007494236}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 1056960237}
+  - {fileID: 1116860200}
+  - {fileID: 30186750}
+  - {fileID: 19078033}
+  - {fileID: 1045118584}
   m_Father: {fileID: 697329779822987137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2171,6 +2326,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9758c511dbec6843807a5945af937ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillOne_Point: {fileID: 623706267}
+  skillTwo_Point: {fileID: 138356505}
+  skillOneMusic1: {fileID: 8300000, guid: e4f065c582c3f6f4f9ff07bb898b271e, type: 3}
+  skillOneMusic2: {fileID: 8300000, guid: da0b3f3b71af05a4889f041323f8e93a, type: 3}
+  skillTwoMusic: {fileID: 8300000, guid: 320aec26e7ea1d1428aff8d67f35078b, type: 3}
+  skillThreeMusic: {fileID: 8300000, guid: ba5b004382e3ded4ba1e2a481fe7db4d, type: 3}
+  playerSkillOneSound: {fileID: 8300000, guid: 7cbdb82917e5b794baee4bb41418af10, type: 3}
+  skillOne_EffectPrefab: {fileID: 100008, guid: 6691aa7b9e54d5346a5025c621bc2925, type: 3}
+  skillOne_DamagePrefab: {fileID: 100018, guid: c4c7580851f71b848b6819776b6ac748, type: 3}
+  skillTwo_EffectPrefab: {fileID: 100000, guid: b18096a8a296c6843ba6741a784120d5, type: 3}
+  skillTwo_DamagePrefab: {fileID: 100002, guid: 9670f8a955ac189478d92ef8c8784863, type: 3}
+  skillThree_EffectPrefab: {fileID: 100010, guid: 9014e7364c58270468830662bdcd8007, type: 3}
+  skillOnePoint_1: {fileID: 1780965357}
+  skillOnePoint_2: {fileID: 878970663}
+  skillOnePoint_3: {fileID: 1259935083}
+  skillOnePoint_4: {fileID: 1589592785}
+  skillOnePoint_5: {fileID: 902162163}
+  skillOnePoint_6: {fileID: 1414150688}
+  skillOnePoint_7: {fileID: 799894894}
+  skillOnePoint_8: {fileID: 51599276}
+  skillTwoPoint_1: {fileID: 1043049023}
+  skillTwoPoint_2: {fileID: 463467782}
+  skillTwoPoint_3: {fileID: 208029522}
+  skillTwoPoint_4: {fileID: 1422642391}
+  skillTwoPoint_5: {fileID: 2006177973}
+  skillTwoPoint_6: {fileID: 1110307554}
+  skillThreePoint_1: {fileID: 1056960237}
+  skillThreePoint_2: {fileID: 1116860200}
+  skillThreePoint_3: {fileID: 30186750}
+  skillThreePoint_4: {fileID: 19078033}
+  skillThreePoint_5: {fileID: 1045118584}
 --- !u!114 &3943857578029991144
 MonoBehaviour:
   m_ObjectHideFlags: 0
