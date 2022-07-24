@@ -86,6 +86,8 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField]
     private Transform skillThreePoint_5;
 
+    /*[SerializeField] private Transform[] allSkillPoints;*/
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -191,6 +193,7 @@ public class PlayerAttacks : MonoBehaviour
         Instantiate(skillOne_DamagePrefab, skillOnePoint_6.position, skillOnePoint_6.rotation);
         Instantiate(skillOne_DamagePrefab, skillOnePoint_7.position, skillOnePoint_7.rotation);
         Instantiate(skillOne_DamagePrefab, skillOnePoint_8.position, skillOnePoint_8.rotation);
+        /*Instantiate(skillOne_DamagePrefab, allSkillPoints[1].position, allSkillPoints[1].rotation);*/
     }
     
     //Skill 2 Effects
