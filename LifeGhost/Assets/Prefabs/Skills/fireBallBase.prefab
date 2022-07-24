@@ -19502,6 +19502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa87d85022bca74b85d88f6d65a59f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 5
+  y: 0
+  z: 0
+  local: 1
 --- !u!114 &1824452350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19514,3 +19518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3466920d535660945be03fbd9a18cffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 247
+  skillEffectPrefab: {fileID: 100014, guid: 654746e5424740344851ed984f7ac7ce, type: 3}
+  radius: 0.2
