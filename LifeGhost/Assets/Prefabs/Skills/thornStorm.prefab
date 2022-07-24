@@ -60,6 +60,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824ced76e4b063f4d91e434efef98e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPrefabs:
+  - {fileID: 100002, guid: 3537826941f13d8448e00a0558ded789, type: 3}
+  thisManyTime: 15
+  overThisTime: 0.75
+  x_Width: 1
+  y_Width: 0
+  z_Width: 1
+  x_RotMax: 20
+  y_RotMax: 180
+  z_RotMax: 20
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0

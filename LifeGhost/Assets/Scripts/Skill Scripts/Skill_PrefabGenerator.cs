@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //Class Summary:  Generate Prefab out of the arrows.||  Also using timercounter to control the spawn rate 
 public class Skill_PrefabGenerator : MonoBehaviour
@@ -28,6 +29,64 @@ public class Skill_PrefabGenerator : MonoBehaviour
 
     private void Start()
     {
+        if (thisManyTime < 1)
+            thisManyTime = 1;
+        
         trigger = overThisTime / thisManyTime;  //Define interval of time
     }
+
+    private void Update()
+    {
+        timeCounter += Time.deltaTime;
+
+        if (timeCounter > trigger && effectCounter <= thisManyTime)
+            randNum = Random.Range(0, skillPrefabs.Length);
+
+        x_Cur = transform.position.x + (Random.value * x_Width) - (x_Width * 0.5f);
+        y_Cur = transform.position.y + (Random.value * y_Width) - (y_Width * 0.5f);
+        z_Cur = transform.position.z + (Random.value * z_Width) - (z_Width * 0.5f);
+
+        if (!allUseSameRotation || !allRotationDecided)
+        {
+            x_RotCur = transform.rotation.x + (Random.value * x_RotMax * 2) - (x_RotMax);
+            y_RotCur = transform.rotation.y + (Random.value * y_RotMax * 2) - (y_RotMax);
+            z_RotCur = transform.rotation.z + (Random.value * z_RotMax * 2) - (z_RotMax);
+            allRotationDecided = true;
+
+        }
+
+        GameObject skill = Instantiate(skillPrefabs[randNum], new Vector3(x_Cur, y_Cur, z_Cur), 
+            transform.rotation);
+        skill.transform.Rotate(x_RotCur, y_RotCur, z_RotCur);
+
+        timeCounter -= trigger;
+        effectCounter += 1;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
