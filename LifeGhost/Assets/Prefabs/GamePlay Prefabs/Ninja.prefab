@@ -2115,6 +2115,7 @@ GameObject:
   - component: {fileID: 2055315206}
   - component: {fileID: 3943857578029991144}
   - component: {fileID: 9008786470176119969}
+  - component: {fileID: 697329777834493183}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -2392,6 +2393,19 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: 8db498fa3564d0c49914eaba533aef2f, type: 2}
   animator: {fileID: 697329779815245899}
   emitType: 0
+--- !u!114 &697329777834493183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697329779822631935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5255cab35728884f9a3f080edc89ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realHealth: 0
 --- !u!1001 &697329777784540360
 PrefabInstance:
   m_ObjectHideFlags: 0
