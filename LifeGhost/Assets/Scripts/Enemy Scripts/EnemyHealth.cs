@@ -58,7 +58,6 @@ public class EnemyHealth : MonoBehaviour {
         if (realHealth <= 0) {
             realHealth = 0;
             EnemyDying();
-
         }
 
         if (amount > 0)
