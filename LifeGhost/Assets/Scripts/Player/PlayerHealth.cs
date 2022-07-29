@@ -29,6 +29,10 @@ public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
 
     }
 
+    private void Start() {
+        realHealth = 100f;
+    }
+
     private void Update() {
         if (realHealth <= 0) {
             realHealth = 0;
@@ -70,12 +74,14 @@ public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
     public void TakeDamage(float amount) {                       //Use Interface IDamagable
         realHealth -= amount;
 
+        Debug.Log("Damage Given is " + realHealth);
+
         if (realHealth <= 0)
             realHealth = 0;
 
         if (amount > 0) {
             //healthText.text = realHealth.ToString()
-            healthSlider.value = realHealth;
+            //healthSlider.value = realHealth;
             playerBeHit = true;
 
         }
