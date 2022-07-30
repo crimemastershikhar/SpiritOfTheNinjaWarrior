@@ -664,7 +664,7 @@ MonoBehaviour:
   radius: 0.4
   attackEffect: {fileID: 100004, guid: 20747cbb589a10f418c2fd1d67647962, type: 3}
   hitPoint: {fileID: 1487690790}
-  damageCount: 5
+  damageCount: 20
 --- !u!114 &4426682123985524486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +677,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f71b230a1e73b4d9b6925fe550a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  radius: 0.4
+  hitPoint: {fileID: 1487690790}
+  damageCount: 10
+  attackEffect: {fileID: 100004, guid: 20747cbb589a10f418c2fd1d67647962, type: 3}
 --- !u!1 &1589592784
 GameObject:
   m_ObjectHideFlags: 0

@@ -33289,6 +33289,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77aa8fa858145341b40f223a6fafe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  radius: 0.2
+  damageCount: 10
+  damageEffect: {fileID: 100008, guid: 5cd612e83713bde4da6e0a059cac6984, type: 3}
 --- !u!114 &535151784126880717
 MonoBehaviour:
   m_ObjectHideFlags: 0
