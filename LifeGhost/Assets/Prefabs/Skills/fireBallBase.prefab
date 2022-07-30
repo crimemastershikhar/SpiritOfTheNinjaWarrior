@@ -19357,7 +19357,6 @@ GameObject:
   - component: {fileID: 400008}
   - component: {fileID: 8200000}
   - component: {fileID: 1824452348}
-  - component: {fileID: 1824452349}
   - component: {fileID: 1824452350}
   m_Layer: 0
   m_Name: fireBallBase
@@ -19490,22 +19489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
---- !u!114 &1824452349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa87d85022bca74b85d88f6d65a59f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 5
-  y: 0
-  z: 0
-  local: 1
 --- !u!114 &1824452350
 MonoBehaviour:
   m_ObjectHideFlags: 0

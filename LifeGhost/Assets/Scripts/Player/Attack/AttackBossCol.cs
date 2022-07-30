@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill_DamageBoss : MonoBehaviour {
+public class AttackBossCol : MonoBehaviour {
 
     [SerializeField] private LayerMask bossLayer;
     [SerializeField] private float radius;
+    [SerializeField] private Transform hitPoint;
     [SerializeField] private float damageCount;
 
-    private bool collided;
+    [SerializeField] GameObject attackEffect;
+
     private BossHealth bossHealth;
-
-    [SerializeField] private GameObject damageEffect;
-
+    private bool collided;
 
     private void Update() {
         Collider[] hits = Physics.OverlapSphere(transform.position, radius, bossLayer);
@@ -23,14 +23,19 @@ public class Skill_DamageBoss : MonoBehaviour {
             collided = true;
             bossHealth = c.gameObject.GetComponent<BossHealth>();
             if (collided) {
-                Instantiate(damageEffect, transform.position, transform.rotation);
+                Instantiate(attackEffect, hitPoint.position, hitPoint.rotation);
                 bossHealth.BossTakeDamage(damageCount);
-                Destroy(gameObject);
 
             }
         }
 
     }
+
+
+
+
+
+
 
 
 

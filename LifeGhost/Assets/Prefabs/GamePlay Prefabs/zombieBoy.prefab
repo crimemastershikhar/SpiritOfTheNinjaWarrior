@@ -79,7 +79,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  damageCount: 10
+  damageCount: 1
 --- !u!1 &1100540122
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDeadSound: {fileID: 8300000, guid: 751eaad8d4a17994ba09217837b760dd, type: 3}
-  attackPointOne: {fileID: 0}
-  attackPointTwo: {fileID: 0}
+  attackPointOne: {fileID: 691967776}
+  attackPointTwo: {fileID: 1100540122}
   deadEffect: {fileID: 100004, guid: dcd9cd85101f2df48b9f94d6a44227fb, type: 3}
   deadEffectPoint: {fileID: 495089412}
 --- !u!195 &1637216626221055487

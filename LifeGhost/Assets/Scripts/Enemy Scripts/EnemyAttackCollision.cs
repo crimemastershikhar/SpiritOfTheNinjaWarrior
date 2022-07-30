@@ -23,9 +23,12 @@ public class EnemyAttackCollision : MonoBehaviour {
                 continue;
 
             collided = true;
-        }
-        if (collided) {
-            playerHealth.TakeDamage(damageCount);
+
+            if (collided) {
+                playerHealth.TakeDamage(damageCount);
+
+            }
+
         }
 
     }
