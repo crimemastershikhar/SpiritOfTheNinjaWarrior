@@ -33112,6 +33112,7 @@ GameObject:
   - component: {fileID: 6374716536481299686}
   - component: {fileID: 1747435553217965653}
   - component: {fileID: 8580830598635140233}
+  - component: {fileID: 535151784126880717}
   m_Layer: 0
   m_Name: fireExplosionBase 1
   m_TagString: explosion
@@ -33270,6 +33271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1f97f5b7f6f5e4eb38c87e30a65e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zombieLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  radius: 0.2
+  damageCount: 100
+  damageEffect: {fileID: 100008, guid: 5cd612e83713bde4da6e0a059cac6984, type: 3}
 --- !u!114 &8580830598635140233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33282,3 +33289,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77aa8fa858145341b40f223a6fafe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &535151784126880717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa87d85022bca74b85d88f6d65a59f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 5
+  y: 0
+  z: 0
+  local: 0

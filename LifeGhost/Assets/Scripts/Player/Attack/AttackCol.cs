@@ -23,7 +23,7 @@ public class AttackCol : MonoBehaviour {
                 continue;
             }
 
-            enemyHealth = c.gameObject.GetComponent<EnemyHealth>();
+            enemyHealth = c.gameObject.GetComponent<EnemyHealth>();            //Taking care of multiple enemies
             collided = true;
 
             if (collided) {
