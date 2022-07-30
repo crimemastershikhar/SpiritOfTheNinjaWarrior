@@ -31,7 +31,6 @@ public class EnemyHealth : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 
-
     }
 
     private void Start() {
