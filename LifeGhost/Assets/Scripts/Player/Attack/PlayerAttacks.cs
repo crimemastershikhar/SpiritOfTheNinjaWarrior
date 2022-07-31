@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerAttacks : MonoBehaviour
-{
+public class PlayerAttacks : MonoBehaviour {
     private Animator anim;
     private AudioSource audioSource;
-    
+
     //Animation States
     private string ANIMATION_ATTACK = "Attack";
     private string ANIMATION_SKILL1 = "Skill1";
@@ -17,7 +17,7 @@ public class PlayerAttacks : MonoBehaviour
     private bool s1_NotUsed;
     private bool s2_NotUsed;
     private bool s3_NotUsed;
-    
+
     [SerializeField]
     private Transform skillOne_Point;    //Instantiate effect prefab
     [SerializeField]
@@ -35,13 +35,13 @@ public class PlayerAttacks : MonoBehaviour
     private AudioClip playerSkillOneSound;
 
 
-    [SerializeField] 
+    [SerializeField]
     private GameObject skillOne_EffectPrefab;
-    [SerializeField] 
+    [SerializeField]
     private GameObject skillOne_DamagePrefab;
-    [SerializeField] 
+    [SerializeField]
     private GameObject skillTwo_EffectPrefab;
-    [SerializeField] 
+    [SerializeField]
     private GameObject skillTwo_DamagePrefab;
     [SerializeField]
     private GameObject skillThree_EffectPrefab;
@@ -86,53 +86,78 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField]
     private Transform skillThreePoint_5;
 
+    [SerializeField] private Button skillOne_Btn;
+    [SerializeField] private Button skillTwo_Btn;
+    [SerializeField] private Button skillThree_Btn;
+
     /*[SerializeField] private Transform[] allSkillPoints;*/
 
-    private void Awake()
-    {
+    private void Awake() {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
         s1_NotUsed = true;
         s2_NotUsed = true;
         s3_NotUsed = true;
+
+        skillOne_Btn.onClick.AddListener(() => SkillOneButtonPressed());
+        skillTwo_Btn.onClick.AddListener(() => SkillTwoButtonPressed());
+        skillThree_Btn.onClick.AddListener(() => SkillThreeButtonPressed());
+
     }
 
-    private void Update()
-    {
+    private void Update() {
         HandleButtonPresses();
     }
 
-    private void HandleButtonPresses()
-    {
+    //Listeners for 4 buttons below
+
+    public void AttackButtonPressed() {
+        anim.SetBool(ANIMATION_ATTACK, true);
+
+    }
+
+    public void AttackButtonReleased() {
+        anim.SetBool(ANIMATION_ATTACK, false);
+
+    }
+
+    public void SkillOneButtonPressed() {
+        anim.SetBool(ANIMATION_SKILL1, true);
+    }
+
+    public void SkillTwoButtonPressed() {
+        anim.SetBool(ANIMATION_SKILL2, true);
+    }
+
+    public void SkillThreeButtonPressed() {
+        anim.SetBool(ANIMATION_SKILL3, true);
+    }
+
+    private void HandleButtonPresses() {
         if (Input.GetKeyDown(KeyCode.E))
             anim.SetBool(ANIMATION_ATTACK, true);
 
         if (Input.GetKeyUp(KeyCode.E))
             anim.SetBool(ANIMATION_ATTACK, false);
-        
-        if(Input.GetKeyDown(KeyCode.J))
-            if (s1_NotUsed)
-            {
+
+        if (Input.GetKeyDown(KeyCode.J))
+            if (s1_NotUsed) {
                 s1_NotUsed = false;
                 anim.SetBool(ANIMATION_SKILL1, true);
                 StartCoroutine(ResetSkills(1));
             }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (s2_NotUsed)
-            {
+        if (Input.GetKeyDown(KeyCode.K)) {
+            if (s2_NotUsed) {
                 s2_NotUsed = false;
                 anim.SetBool(ANIMATION_SKILL2, true);
                 StartCoroutine(ResetSkills(2));
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            if (s3_NotUsed)
-            {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            if (s3_NotUsed) {
                 s3_NotUsed = false;
                 anim.SetBool(ANIMATION_SKILL3, true);
                 StartCoroutine(ResetSkills(3));
@@ -140,50 +165,43 @@ public class PlayerAttacks : MonoBehaviour
         }
     }
 
-    IEnumerator ResetSkills(int skill)
-    {
+    IEnumerator ResetSkills(int skill) {
         yield return new WaitForSeconds(3f);
-        switch (skill)
-        {
+        switch (skill) {
             case 1:
                 s1_NotUsed = true;
                 break;
             case 2:
                 s2_NotUsed = true;
                 break;
-            case  3:
+            case 3:
                 s3_NotUsed = true;
                 break;
         }
     }
-    
+
     //Skill 1 Effects
-    void SkillOne(bool skillOne)
-    {
-        if (skillOne)
-        {
+    void SkillOne(bool skillOne) {
+        if (skillOne) {
             Instantiate(skillOne_EffectPrefab, skillOne_Point.position, skillOne_Point.rotation);
             audioSource.PlayOneShot(skillOneMusic1);
             StartCoroutine(SkillOneCoroutine());
         }
     }
-    
-    void SkillOneEnd(bool skillOneEnd)
-    {
-        if(skillOneEnd)
+
+    void SkillOneEnd(bool skillOneEnd) {
+        if (skillOneEnd)
             anim.SetBool(ANIMATION_SKILL1, false);
-        
+
     }
 
-    void SkillOneSound(bool play)
-    {
+    void SkillOneSound(bool play) {
         if (play)
             audioSource.PlayOneShot(playerSkillOneSound);
-        
+
     }
 
-    IEnumerator SkillOneCoroutine()
-    {
+    IEnumerator SkillOneCoroutine() {
         yield return new WaitForSeconds(1.5f);
         Instantiate(skillOne_DamagePrefab, skillOnePoint_1.position, skillOnePoint_1.rotation);
         Instantiate(skillOne_DamagePrefab, skillOnePoint_2.position, skillOnePoint_2.rotation);
@@ -195,32 +213,28 @@ public class PlayerAttacks : MonoBehaviour
         Instantiate(skillOne_DamagePrefab, skillOnePoint_8.position, skillOnePoint_8.rotation);
         /*Instantiate(skillOne_DamagePrefab, allSkillPoints[1].position, allSkillPoints[1].rotation);*/
     }
-    
+
     //Skill 2 Effects
-    void SkillTwo(bool skillTwo)
-    {
-        if (skillTwo)
-        {
+    void SkillTwo(bool skillTwo) {
+        if (skillTwo) {
             Instantiate(skillTwo_EffectPrefab, skillTwo_Point.position, skillTwo_Point.rotation);
             audioSource.PlayOneShot(skillTwoMusic);
             StartCoroutine(SkillTwoCoroutine());
         }
     }
 
-    void SkillTwoEnd(bool skillTwoEnd)
-    {
-        if(skillTwoEnd)
+    void SkillTwoEnd(bool skillTwoEnd) {
+        if (skillTwoEnd)
             anim.SetBool(ANIMATION_SKILL2, false);
     }
-    
+
     /*void SkillTwoSound(bool play)
     {
         if(play)
             audioSource.PlayOneShot();
     }*/
 
-    IEnumerator SkillTwoCoroutine()
-    {
+    IEnumerator SkillTwoCoroutine() {
         yield return new WaitForSeconds(1.5f);
         Instantiate(skillTwo_DamagePrefab, skillTwoPoint_1.position, skillTwoPoint_1.rotation);
         Instantiate(skillTwo_DamagePrefab, skillTwoPoint_2.position, skillTwoPoint_2.rotation);
@@ -228,15 +242,13 @@ public class PlayerAttacks : MonoBehaviour
         Instantiate(skillTwo_DamagePrefab, skillTwoPoint_4.position, skillTwoPoint_4.rotation);
         Instantiate(skillTwo_DamagePrefab, skillTwoPoint_5.position, skillTwoPoint_5.rotation);
         Instantiate(skillTwo_DamagePrefab, skillTwoPoint_6.position, skillTwoPoint_6.rotation);
-        
+
     }
-    
+
     // Skill 3 Effects
 
-    void SkillThree(bool skillThree)
-    {
-        if (skillThree)
-        {
+    void SkillThree(bool skillThree) {
+        if (skillThree) {
             Instantiate(skillThree_EffectPrefab, skillThreePoint_1.position, skillThreePoint_1.rotation);
             Instantiate(skillThree_EffectPrefab, skillThreePoint_2.position, skillThreePoint_2.rotation);
             Instantiate(skillThree_EffectPrefab, skillThreePoint_3.position, skillThreePoint_3.rotation);
@@ -247,26 +259,25 @@ public class PlayerAttacks : MonoBehaviour
         }
     }
 
-    void SkillThreeEnd(bool skillThreeEnd)
-    {
-        if(skillThreeEnd)
+    void SkillThreeEnd(bool skillThreeEnd) {
+        if (skillThreeEnd)
             anim.SetBool(ANIMATION_SKILL3, false);
     }
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -2398,6 +2398,9 @@ MonoBehaviour:
   skillThreePoint_3: {fileID: 30186750}
   skillThreePoint_4: {fileID: 19078033}
   skillThreePoint_5: {fileID: 1045118584}
+  skillOne_Btn: {fileID: 0}
+  skillTwo_Btn: {fileID: 0}
+  skillThree_Btn: {fileID: 0}
 --- !u!114 &3943857578029991144
 MonoBehaviour:
   m_ObjectHideFlags: 0
