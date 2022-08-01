@@ -1,17 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //Summary: This is responsible for adding a wait time before the player can click the skill button again
 
 public class WaitBeforeAttackingAgain : MonoBehaviour {
 
     [SerializeField] private int waitTime;
-
     private int fadeTime;
 
-    private Text waitText;
+    private TextMeshProUGUI waitText;
     private Image fadeImg;
 
     private bool canFade;
@@ -21,7 +20,7 @@ public class WaitBeforeAttackingAgain : MonoBehaviour {
     private void Awake() {
         waitBeforeAttackingPanel = transform.GetChild(0).gameObject;
 
-        waitText = waitBeforeAttackingPanel.GetComponentInChildren<Text>();
+        waitText = waitBeforeAttackingPanel.GetComponentInChildren<TextMeshProUGUI>();
         waitText.text = waitTime.ToString();
 
         fadeImg = waitBeforeAttackingPanel.GetComponent<Image>();
@@ -39,6 +38,7 @@ public class WaitBeforeAttackingAgain : MonoBehaviour {
         waitBeforeAttackingPanel.SetActive(true);
         waitText.text = waitTime.ToString();
 
+        //Resetting Color
         Color temp = fadeImg.color;
         temp.a = 1f;
         fadeImg.color = temp;

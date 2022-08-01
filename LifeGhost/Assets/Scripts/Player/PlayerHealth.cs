@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
+
     public float realHealth { get; private set; }
 
     private BossHealth bossHealth;
-    /*    [SerializeField] private Transform bossTransform;*/
+    [SerializeField] private Transform bossTransform;
 
-    private Slider healthSlider;
-    private Text healthText;
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private TextMeshProUGUI healthText;
 
     private string ANIMATION_DEAD = "Dead";
     private string ANIMATION_ATTACK = "Attack";
@@ -25,12 +27,23 @@ public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
 
     private void Awake() {
         anim = GetComponent<Animator>();
-        /*        bossHealth = bossTransform.gameObject.GetComponent<BossHealth>();*/
+
+        healthText.text = realHealth.ToString();
+        healthSlider.value = realHealth;
+
+        bossHealth = bossTransform.gameObject.GetComponent<BossHealth>();
 
     }
 
     private void Start() {
-        realHealth = 100f;
+        SetHealth(100f);
+
+    }
+
+    void SetHealth(float health) {
+        realHealth = health;
+        healthText.text = health.ToString();
+        healthSlider.value = health;
     }
 
     private void Update() {
@@ -45,10 +58,10 @@ public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
 
         }
 
-        /*        if (bossHealth.realHealth <= 0) {
-                    Victory();
+        if (bossHealth.realHealth <= 0) {
+            Victory();
 
-                }*/
+        }
 
         if (victory) {
             StopVictoryAnimation();
@@ -80,8 +93,8 @@ public class PlayerHealth : MonoBehaviour /*, IDamagable*/ {
             realHealth = 0;
 
         if (amount > 0) {
-            //healthText.text = realHealth.ToString()
-            //healthSlider.value = realHealth;
+            healthText.text = realHealth.ToString();
+            healthSlider.value = realHealth;
             playerBeHit = true;
 
         }

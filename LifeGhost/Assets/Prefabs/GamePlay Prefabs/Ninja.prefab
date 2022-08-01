@@ -2156,6 +2156,7 @@ GameObject:
   - component: {fileID: 3943857578029991144}
   - component: {fileID: 9008786470176119969}
   - component: {fileID: 697329777834493183}
+  - component: {fileID: 1338431551}
   m_Layer: 7
   m_Name: Ninja
   m_TagString: Player
@@ -2332,7 +2333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697329779822631935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a00c0d430746b545abc0799b444718f, type: 3}
   m_Name: 
@@ -2348,7 +2349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697329779822631935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9d94016c9346144f8e9425f7a656028, type: 3}
   m_Name: 
@@ -2448,6 +2449,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5255cab35728884f9a3f080edc89ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
+--- !u!114 &1338431551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697329779822631935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c4f70b903e3534abe6e23a18145c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstep1: {fileID: 8300000, guid: dd48f5b5e8a523d439d5bdadb3850572, type: 3}
+  footstep2: {fileID: 8300000, guid: a2a8612c33f5784429c7e35f1a9ce351, type: 3}
 --- !u!1001 &697329777784540360
 PrefabInstance:
   m_ObjectHideFlags: 0
